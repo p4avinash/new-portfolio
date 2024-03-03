@@ -1,9 +1,5 @@
 import { nanoid } from "nanoid"
 import { FaHtml5, FaJs, FaReact } from "react-icons/fa"
-import netflix_banner from "./assets/images/netflix_project_banner.png"
-import comfy_store_banner from "./assets/images/comfy_store_banner.png"
-import youtube_banner from "./assets/images/youtube_banner.png"
-import unsplash_images_banner from "./assets/images/unsplash_images_banner.png"
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -36,7 +32,7 @@ export const skills = [
 export const projects = [
   {
     id: nanoid(),
-    img: netflix_banner,
+    img: "https://d33wubrfki0l68.cloudfront.net/65e2d852459a380008f6bbde/screenshot_2024-03-02-07-43-29-0000.webp",
     url: "https://p4avinash-netflix.netlify.app/",
     github: "https://github.com/p4avinash/netflix",
     title: "Netflix",
@@ -44,7 +40,7 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: comfy_store_banner,
+    img: "https://d33wubrfki0l68.cloudfront.net/65210642306fd30008c1bb1f/screenshot_2023-10-07-07-19-14-0000.png",
     url: "https://p4avinash-comfy-store.netlify.app/",
     github: "https://github.com/p4avinash/comfy-store",
     title: "Comfy Store",
@@ -52,7 +48,7 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: youtube_banner,
+    img: "https://d33wubrfki0l68.cloudfront.net/65db23213f139c00081f6bf5/screenshot_2024-02-25-11-24-23-0000.webp",
     url: "https://p4avinash-youtube.netlify.app/",
     github: "https://github.com/p4avinash/youtube",
     title: "Youtube",
@@ -60,10 +56,18 @@ export const projects = [
   },
   {
     id: nanoid(),
-    img: unsplash_images_banner,
+    img: "https://d33wubrfki0l68.cloudfront.net/650fe9de6b39eb0008c1a177/screenshot_2023-09-24-07-49-10-0000.png",
     url: "https://p4avinash-unsplash-images.netlify.app/",
     github: "https://github.com/p4avinash/unsplash-images",
     title: "Unsplash Images",
     text: "This is a React app, which uses unsplash images API to fetch images. We can use the search bar to search the images as per our choice. React query is implemented in the app, to cache the search results for a limited amount of time to reduce API calls.",
+  },
+  {
+    id: nanoid(),
+    img: "https://d33wubrfki0l68.cloudfront.net/651511dedecf990008a9b669/screenshot_2023-09-28-05-41-04-0000.png",
+    url: "https://p4avinash-mix-master.netlify.app/",
+    github: "https://github.com/p4avinash/mix-master",
+    title: "Mix-Master",
+    text: "This is a React app, which provides info. about cocktails and how to make them.",
   },
 ]
