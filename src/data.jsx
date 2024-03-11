@@ -33,7 +33,7 @@ export const projects = [
   {
     id: nanoid(),
     img: "https://d33wubrfki0l68.cloudfront.net/65e2d852459a380008f6bbde/screenshot_2024-03-02-07-43-29-0000.webp",
-    url: "https://p4avinash-netflix.netlify.app/",
+    url: "https://p4avinash-movie-recommendation.netlify.app/",
     github: "https://github.com/p4avinash/netflix",
     title: "Netflix",
     text: "This is a React app, which is a clone of Netflix. It supports multi-languages (English, Hindi & Spanish). It'll show the info. about movies. Plus there's a suggestion section, which uses Open AI to suggest movies as per your mood.",
