@@ -77,12 +77,12 @@ export const projects = [
     title: "Unsplash Images",
     text: "This is a React app, which uses unsplash images API to fetch images. We can use the search bar to search the images as per our choice. React query is implemented in the app, to cache the search results for a limited amount of time to reduce API calls.",
   },
-  // {
-  //   id: nanoid(),
-  //   img: "https://d33wubrfki0l68.cloudfront.net/651511dedecf990008a9b669/screenshot_2023-09-28-05-41-04-0000.png",
-  //   url: "https://p4avinash-mix-master.netlify.app/",
-  //   github: "https://github.com/p4avinash/mix-master",
-  //   title: "Mix-Master",
-  //   text: "This is a React app, which provides info. about cocktails and how to make them.",
-  // },
+  {
+    id: nanoid(),
+    img: "https://d33wubrfki0l68.cloudfront.net/651511dedecf990008a9b669/screenshot_2023-09-28-05-41-04-0000.png",
+    url: "https://p4avinash-mix-master.netlify.app/",
+    github: "https://github.com/p4avinash/mix-master",
+    title: "Mix-Master",
+    text: "This is a React app, which provides info. about cocktails and how to make them.",
+  },
 ]
