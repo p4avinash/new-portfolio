@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid"
-import { FaHtml5, FaJs, FaReact } from "react-icons/fa"
+import { FaBrain, FaHtml5, FaJs, FaReact } from "react-icons/fa"
+import docmind from "./assets/docmind.png"
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -11,9 +12,9 @@ export const links = [
 export const skills = [
   {
     id: nanoid(),
-    title: "HTML&CSS",
-    icon: <FaHtml5 className='h-16 w-16 text-emerald-500' />,
-    text: "Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.",
+    title: "React",
+    icon: <FaReact className='h-16 w-16 text-emerald-500' />,
+    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
   },
   {
     id: nanoid(),
@@ -21,15 +22,29 @@ export const skills = [
     icon: <FaJs className='h-16 w-16 text-emerald-500' />,
     text: "Expertise in JavaScript, building interactive and dynamic web applications with a focus on seamless user interactions and functionality",
   },
+  // {
+  //   id: nanoid(),
+  //   title: "HTML&CSS",
+  //   icon: <FaHtml5 className='h-16 w-16 text-emerald-500' />,
+  //   text: "Highly skilled in HTML & CSS, adeptly crafting visually appealing and responsive websites for optimal user experiences.",
+  // },
   {
     id: nanoid(),
-    title: "React",
-    icon: <FaReact className='h-16 w-16 text-emerald-500' />,
-    text: "Advanced proficiency in React, developing efficient and interactive front-end applications with a strong emphasis on component-based architecture.",
+    title: "AI Engineering",
+    icon: <FaBrain className='h-16 w-16 text-emerald-500' />,
+    text: "Building AI-powered applications using Retrieval-Augmented Generation (RAG), vector databases, embeddings, semantic search, prompt engineering, Groq LLMs and modern AI workflows.",
   },
 ]
 
 export const projects = [
+  {
+    id: nanoid(),
+    img: docmind,
+    url: "https://p4avinash-doc-mind-ai.netlify.app/",
+    github: "https://github.com/p4avinash",
+    title: "DocMind AI",
+    text: "An AI-powered document chat application built using React, Express, MongoDB, Pinecone, Jina Embeddings and Groq LLM. Upload PDFs, generate embeddings, perform semantic search using Retrieval-Augmented Generation (RAG), view answer sources, and chat with documents in real time.",
+  },
   {
     id: nanoid(),
     img: "https://d33wubrfki0l68.cloudfront.net/65e2d852459a380008f6bbde/screenshot_2024-03-02-07-43-29-0000.webp",
@@ -62,12 +77,12 @@ export const projects = [
     title: "Unsplash Images",
     text: "This is a React app, which uses unsplash images API to fetch images. We can use the search bar to search the images as per our choice. React query is implemented in the app, to cache the search results for a limited amount of time to reduce API calls.",
   },
-  {
-    id: nanoid(),
-    img: "https://d33wubrfki0l68.cloudfront.net/651511dedecf990008a9b669/screenshot_2023-09-28-05-41-04-0000.png",
-    url: "https://p4avinash-mix-master.netlify.app/",
-    github: "https://github.com/p4avinash/mix-master",
-    title: "Mix-Master",
-    text: "This is a React app, which provides info. about cocktails and how to make them.",
-  },
+  // {
+  //   id: nanoid(),
+  //   img: "https://d33wubrfki0l68.cloudfront.net/651511dedecf990008a9b669/screenshot_2023-09-28-05-41-04-0000.png",
+  //   url: "https://p4avinash-mix-master.netlify.app/",
+  //   github: "https://github.com/p4avinash/mix-master",
+  //   title: "Mix-Master",
+  //   text: "This is a React app, which provides info. about cocktails and how to make them.",
+  // },
 ]

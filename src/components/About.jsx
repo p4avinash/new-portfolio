@@ -8,11 +8,12 @@ const About = () => {
         <article>
           <SectionTitle text='code and coffee' />
           <p className='text-slate-600 mt-8 leading-loose'>
-            Hi, there! I'm a Web Developer, with experience in JavaScript, and
-            expertise in frameworks like React.js. I'm a quick learner and
-            collaborate closely with clients to create efficient, scalable, and
-            user-friendly solutions that solve real-world problems. Let's work
-            together to bring your ideas to life!
+            Hi, I'm a React & TypeScript Developer passionate about building
+            modern, scalable web applications. Alongside frontend development,
+            I'm exploring AI by building Retrieval-Augmented Generation (RAG)
+            applications powered by vector databases, embeddings, and Large
+            Language Models. I enjoy solving real-world problems, learning new
+            technologies, and creating fast, intuitive user experiences!
           </p>
         </article>
       </div>
