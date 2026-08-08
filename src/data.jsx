@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid"
 import { FaBrain, FaHtml5, FaJs, FaReact } from "react-icons/fa"
 import docmind from "./assets/docmind.png"
+import meetmind from "./assets/meetmind.png"
 
 export const links = [
   { id: nanoid(), href: "#home", text: "home" },
@@ -37,6 +38,14 @@ export const skills = [
 ]
 
 export const projects = [
+  {
+    id: nanoid(),
+    img: meetmind,
+    url: "https://p4avinash-meet-mind-ai.netlify.app/dashboard",
+    github: "https://github.com/p4avinash/meet-mind-ai",
+    title: "MeetMind AI",
+    text: "An AI-powered meeting assistant and intelligence application. Features automated transcript analysis, meeting summaries, action item extraction, and smart meeting insights built with React and AI integration.",
+  },
   {
     id: nanoid(),
     img: docmind,
