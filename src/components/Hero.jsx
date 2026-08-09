@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { motion } from "framer-motion"
 import heroImg from "../assets/hero.svg"
 import { FaGithubSquare, FaLinkedin, FaFilePdf, FaMedium, FaEnvelope, FaChevronRight } from "react-icons/fa"
 import resume from "../resume/Avinash_Kumar_Resume_Final_2026.pdf"
@@ -11,138 +12,185 @@ const Tooltip = ({ label }) => (
   </span>
 )
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.1,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+}
+
 const Hero = () => {
   return (
     <section id='home' className='relative bg-slate-950 text-slate-100 py-16 sm:py-24 overflow-hidden border-b border-slate-900'>
       {/* Background ambient lighting */}
-      <div className='absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none'></div>
-      <div className='absolute bottom-10 right-10 w-[300px] h-[200px] bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none'></div>
+      <div className='absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none animate-glow-pulse'></div>
+      <div className='absolute bottom-10 right-10 w-[300px] h-[200px] bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none animate-glow-pulse' style={{ animationDelay: "2.5s" }}></div>
 
       <div className='align-element relative z-10 grid lg:grid-cols-12 items-center gap-12'>
-        <article className='lg:col-span-7 space-y-6'>
+        <motion.article
+          variants={containerVariants}
+          initial='hidden'
+          animate='visible'
+          className='lg:col-span-7 space-y-6'
+        >
           {/* Status Badge */}
-          <div className='inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs sm:text-sm font-medium text-emerald-400 backdrop-blur-md'>
+          <motion.div variants={itemVariants} className='inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 text-xs sm:text-sm font-medium text-emerald-400 backdrop-blur-md shadow-sm'>
             <span className='w-2 h-2 rounded-full bg-emerald-400 animate-pulse'></span>
             <span>Frontend Engineer (5+ Yrs) · React & AI Solutions</span>
-          </div>
+          </motion.div>
 
           {/* Heading */}
-          <div className='space-y-2'>
+          <motion.div variants={itemVariants} className='space-y-2'>
             <h1 className='text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-100 leading-tight'>
-              Hi, I'm <span className='gradient-text'>Avinash Kumar</span>
+              Hi, I&apos;m <span className='gradient-text'>Avinash Kumar</span>
             </h1>
             <p className='text-xl sm:text-2xl font-medium text-slate-400'>
               Building Scalable Frontend Systems & AI Web Apps
             </p>
-          </div>
+          </motion.div>
 
           {/* Bio Summary */}
-          <p className='text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed'>
+          <motion.p variants={itemVariants} className='text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed'>
             Frontend engineer with 5+ years of experience shipping production web applications in React, TypeScript, and GraphQL. Specializing in state management, franchise management modules (Compliance & Audits), custom component libraries, and production RAG pipelines.
-          </p>
+          </motion.p>
 
           {/* Action Buttons & Social Links */}
-          <div className='pt-2 flex flex-wrap items-center gap-4'>
-            <a
+          <motion.div variants={itemVariants} className='pt-2 flex flex-wrap items-center gap-4'>
+            <motion.a
               href='#projects'
-              className='inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-3 rounded-full text-sm sm:text-base transition-all duration-200 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:-translate-y-0.5 active:translate-y-0'
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className='inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-3 rounded-full text-sm sm:text-base transition-colors duration-200 shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30'
             >
               <span>View Projects</span>
               <FaChevronRight className='h-3.5 w-3.5' />
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
               href='mailto:p4avinashkumar@gmail.com'
-              className='inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-medium px-5 py-3 rounded-full text-sm sm:text-base transition-all duration-200 hover:-translate-y-0.5'
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className='inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700/80 font-medium px-5 py-3 rounded-full text-sm sm:text-base transition-colors duration-200'
             >
               <FaEnvelope className='h-4 w-4 text-emerald-400' />
               <span>Contact Me</span>
-            </a>
+            </motion.a>
 
             {/* Social Icons */}
             <div className='flex items-center gap-2 pl-2 border-l border-slate-800 ml-1'>
               <div className='relative group'>
-                <a
+                <motion.a
                   href='https://github.com/p4avinash'
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='GitHub Profile'
-                  className='p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 text-slate-400 hover:text-emerald-400 transition-all duration-200 block'
+                  whileHover={{ scale: 1.15, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 text-slate-400 hover:text-emerald-400 transition-colors block'
                 >
                   <FaGithubSquare className='h-5 w-5' />
-                </a>
+                </motion.a>
                 <Tooltip label='GitHub' />
               </div>
 
               <div className='relative group'>
-                <a
+                <motion.a
                   href='https://www.linkedin.com/in/p4avinash/'
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='LinkedIn Profile'
-                  className='p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 text-slate-400 hover:text-emerald-400 transition-all duration-200 block'
+                  whileHover={{ scale: 1.15, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 text-slate-400 hover:text-emerald-400 transition-colors block'
                 >
                   <FaLinkedin className='h-5 w-5' />
-                </a>
+                </motion.a>
                 <Tooltip label='LinkedIn' />
               </div>
 
               <div className='relative group'>
-                <a
+                <motion.a
                   href='https://medium.com/@p4avinash'
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='Medium Articles'
-                  className='p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 text-slate-400 hover:text-emerald-400 transition-all duration-200 block'
+                  whileHover={{ scale: 1.15, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 text-slate-400 hover:text-emerald-400 transition-colors block'
                 >
                   <FaMedium className='h-5 w-5' />
-                </a>
+                </motion.a>
                 <Tooltip label='Medium' />
               </div>
 
               <div className='relative group'>
-                <a
+                <motion.a
                   href={resume}
                   download='Avinash_Kumar_Resume.pdf'
                   target='_blank'
                   rel='noopener noreferrer'
                   aria-label='Download Resume PDF'
-                  className='p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 text-slate-400 hover:text-emerald-400 transition-all duration-200 block'
+                  whileHover={{ scale: 1.15, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className='p-2.5 rounded-full bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/50 text-slate-400 hover:text-emerald-400 transition-colors block'
                 >
                   <FaFilePdf className='h-5 w-5' />
-                </a>
+                </motion.a>
                 <Tooltip label='Download Resume' />
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Metric Highlights Grid */}
-          <div className='pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-900'>
+          <motion.div variants={itemVariants} className='pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-900'>
             {heroMetrics.map((metric) => (
-              <div key={metric.id} className='bg-slate-900/50 border border-slate-800/80 p-3.5 rounded-xl text-center backdrop-blur-sm'>
+              <motion.div
+                key={metric.id}
+                whileHover={{ y: -4, borderColor: "rgba(16, 185, 129, 0.4)", backgroundColor: "rgba(15, 23, 42, 0.8)" }}
+                transition={{ duration: 0.2 }}
+                className='bg-slate-900/50 border border-slate-800/80 p-3.5 rounded-xl text-center backdrop-blur-sm transition-colors'
+              >
                 <div className='text-2xl sm:text-3xl font-extrabold text-emerald-400'>
                   {metric.value}
                 </div>
                 <div className='text-xs text-slate-400 mt-1 font-medium'>
                   {metric.label}
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </article>
+          </motion.div>
+        </motion.article>
 
         {/* Hero Visual Graphic */}
-        <article className='lg:col-span-5 flex justify-center'>
-          <div className='relative w-full max-w-md'>
-            <div className='absolute -inset-1 rounded-3xl bg-gradient-to-r from-emerald-500 to-teal-500 opacity-20 blur-xl'></div>
-            <div className='relative bg-slate-900/80 border border-slate-800 p-6 rounded-3xl backdrop-blur-md shadow-2xl space-y-4'>
+        <motion.article
+          initial={{ opacity: 0, scale: 0.92, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          className='lg:col-span-5 flex justify-center'
+        >
+          <div className='relative w-full max-w-md animate-float-slow'>
+            <div className='absolute -inset-1 rounded-3xl bg-gradient-to-r from-emerald-500 to-teal-500 opacity-20 blur-xl animate-glow-pulse'></div>
+            <div className='relative bg-slate-900/80 border border-slate-800 p-6 rounded-3xl backdrop-blur-md shadow-2xl space-y-4 hover:border-emerald-500/30 transition-colors duration-300'>
               <div className='flex items-center gap-2 border-b border-slate-800 pb-3'>
                 <div className='w-3 h-3 rounded-full bg-red-500/80'></div>
                 <div className='w-3 h-3 rounded-full bg-yellow-500/80'></div>
                 <div className='w-3 h-3 rounded-full bg-emerald-500/80'></div>
                 <span className='ml-2 text-xs font-mono text-slate-400'>Avinash.profile.tsx</span>
               </div>
-              <img src={heroImg} alt='Developer Illustration' className='w-full h-64 sm:h-72 object-contain py-2' />
+              <img src={heroImg} alt='Developer Illustration' className='w-full h-64 sm:h-72 object-contain py-2 drop-shadow-lg' />
               <div className='bg-slate-950/80 p-3 rounded-xl border border-slate-800/80 font-mono text-xs text-slate-300 space-y-1'>
                 <p className='text-emerald-400'>const developer = &#123;</p>
                 <p className='pl-4 text-slate-300'>name: <span className='text-cyan-300'>&apos;Avinash Kumar&apos;</span>,</p>
@@ -153,10 +201,11 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </article>
+        </motion.article>
       </div>
     </section>
   )
 }
 
 export default Hero
+
