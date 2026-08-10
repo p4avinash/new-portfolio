@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { skills } from '../data';
+import { skillCategories } from '../data';
 import SectionTitle from './SectionTitle';
 import SkillsCard from './SkillsCard';
 
@@ -8,7 +8,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.12,
+      staggerChildren: 0.1,
     },
   },
 };
@@ -17,16 +17,16 @@ const Skills = () => {
   return (
     <section className='py-20 bg-slate-950 text-slate-100 border-b border-slate-900' id='skills'>
       <div className='align-element'>
-        <SectionTitle text='tech stack & capabilities' subtitle='Core Competencies' />
+        <SectionTitle text='Technical Expertise & Capabilities' subtitle='Categorized Engineering Stack' />
         <motion.div
           variants={containerVariants}
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true, margin: '-100px' }}
-          className='grid gap-6 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4'
+          className='mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3'
         >
-          {skills.map((skill) => {
-            return <SkillsCard key={skill.id} {...skill} />;
+          {skillCategories.map((category) => {
+            return <SkillsCard key={category.id} {...category} />;
           })}
         </motion.div>
       </div>
@@ -35,4 +35,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

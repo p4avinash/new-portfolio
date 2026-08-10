@@ -8,16 +8,16 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.12,
     },
   },
 };
 
 const Projects = () => {
   return (
-    <section className='py-20 bg-slate-950 text-slate-100' id='projects'>
+    <section className='py-20 bg-slate-950 text-slate-100 border-b border-slate-900' id='projects'>
       <div className='align-element'>
-        <SectionTitle text='featured projects & web creations' subtitle='Portfolio Showcase' />
+        <SectionTitle text='Selected Engineering Work' subtitle='Production Products & Web Architectures' />
         <motion.div
           variants={containerVariants}
           initial='hidden'
@@ -35,4 +35,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
