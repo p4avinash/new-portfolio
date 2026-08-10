@@ -1,4 +1,6 @@
 import About from './components/About';
+import BackToTop from './components/BackToTop';
+import EngineeringImpact from './components/EngineeringImpact';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -8,16 +10,18 @@ import Skills from './components/Skills';
 
 const App = () => {
   return (
-    <div className='min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500 selection:text-slate-950'>
+    <div className='min-h-screen bg-slate-950 bg-grid-pattern text-slate-100 font-sans selection:bg-violet-500 selection:text-white relative overflow-x-hidden'>
       <Navbar />
       <main>
         <Hero />
-        <Skills />
+        <EngineeringImpact />
         <Experience />
-        <About />
         <Projects />
+        <Skills />
+        <About />
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 };
