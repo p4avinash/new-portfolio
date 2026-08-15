@@ -178,7 +178,7 @@ export const projects = [
     id: nanoid(),
     img: docmind,
     url: "https://p4avinash-doc-mind-ai.netlify.app/",
-    github: "https://github.com/p4avinash",
+    github: "https://github.com/p4avinash/ai-document-chat",
     title: "DocMind AI",
     subtitle: "RAG Document Intelligence & Semantic Search",
     text: "Production Retrieval-Augmented Generation (RAG) document chat platform built with React, Express, MongoDB, Pinecone Vector DB, Jina Embeddings, and Groq LLM. Upload documents, generate vector embeddings, and perform instant semantic chat.",
