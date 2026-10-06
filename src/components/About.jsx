@@ -62,11 +62,11 @@ const About = () => {
               </h3>
               
               <p className='text-slate-300 leading-relaxed text-sm sm:text-base'>
-                Frontend Engineer with over 5 years of experience building business-critical modules end to end — from state management and nested routing to GraphQL API layers and third-party automated workflows.
+                Frontend-leaning Full Stack Engineer with 5+ years of experience building and scaling production web applications end-to-end — from state management and RBAC authentication to GraphQL/REST API integration, CI/CD pipelines, and reusable UI components.
               </p>
 
               <p className='text-slate-300 leading-relaxed text-sm sm:text-base'>
-                At <span className='text-violet-400 font-semibold'>Delightree</span>, I built flagship franchise management modules — Compliance, Audits, and Training Paths — streamlining document workflows, employee training, performance tracking, and 3rd-party integrations that slashed customer onboarding time by <span className='text-violet-400 font-semibold'>60–70%</span>.
+                At <span className='text-violet-400 font-semibold'>Delightree</span>, I built 3 flagship franchise management modules — Compliance, Audit, and Training Paths — streamlining document workflows, employee training, performance tracking, and 3rd-party integrations that slashed customer onboarding time by <span className='text-violet-400 font-semibold'>60–70%</span>.
               </p>
 
               <p className='text-slate-300 leading-relaxed text-sm sm:text-base'>
@@ -88,7 +88,7 @@ const About = () => {
                 </div>
                 <div className='flex items-center gap-2 group/item'>
                   <FaCheckCircle className='text-violet-400 shrink-0 group-hover/item:scale-110 transition-transform' />
-                  <span>Compliance, Audits & Training</span>
+                  <span>Compliance, Audit & Training</span>
                 </div>
               </div>
             </div>

@@ -63,7 +63,7 @@ const Hero = () => {
 
           {/* Bio Summary */}
           <motion.p variants={itemVariants} className='text-base sm:text-lg text-slate-400 max-w-2xl leading-relaxed'>
-            Frontend Engineer with 5+ years of production experience building and owning business-critical web applications end-to-end. Specializing in scalable React architecture, complex state management, GraphQL layers, enterprise integrations, and modern AI workflows.
+            Frontend-leaning Full Stack Engineer (MERN) with 5+ years of experience building and scaling production web applications using React.js, TypeScript, Next.js, Node.js, Express.js, and MongoDB. Proven track record owning business-critical modules end-to-end — from GraphQL/REST APIs and Redux state management to RBAC systems and CI/CD pipelines.
           </motion.p>
 
           {/* Action Buttons & Social Links */}
